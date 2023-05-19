@@ -130,3 +130,8 @@ Bug reports:
 Solution:
 
 - Change repo remote to <https://github.com/j3soon/isaac_ros_common> and reset to remote HEAD.
+
+### Jetson Board Setup
+
+- Make sure to flash the supported Jetpack version: <https://github.com/NVIDIA-ISAAC-ROS/.github/blob/main/profile/hardware-setup.md>.
+- A large enough MicroSD Card seem to be able to replace the NVMe SSD card mentioned here: <https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common/blob/main/docs/dev-env-setup_jetson.md>.
