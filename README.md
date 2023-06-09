@@ -98,6 +98,7 @@ docker run --name isaac-sim --entrypoint bash -it --gpus all -e "ACCEPT_EULA=Y" 
 The modified docker command with display is:
 
 ```sh
+xhost +local:docker
 docker run --name isaac-sim --entrypoint bash -it --gpus all -e "ACCEPT_EULA=Y" --rm --network=host \
   -v ~/docker/isaac-sim/cache/kit:/isaac-sim/kit/cache/Kit:rw \
   -v ~/docker/isaac-sim/cache/ov:/root/.cache/ov:rw \
