@@ -183,6 +183,26 @@ Or follow our installation guide below:
 
     ![](./docs/images/nucleus/11-isaac-sim-nucleus.png)
 
+### Troubleshooting
+
+In some cases, Nucleus may not be running properly. You can check the status of the Nucleus process by visiting the `Settings` page of Nucleus:
+
+1. Go to the Nucleus tab and click `Settings`.
+
+   ![](./docs/images/nucleus-troubleshooting/02-nucleus-settings.png)
+
+2. A new tab should be opened in your web browser. Visit the `Apps` tab and make sure that all Apps are currently running. If not, click `Restart all` to start them. If your disk is almost full, you may want to visit the `Cache` tab and clear the cache.
+
+   ![](./docs/images/nucleus-troubleshooting/03-nucleus-web-settings.png)
+
+3. Open Isaac Sim and click `Content > Omniverse > localhost`, Nucleus may ask you to login. After that, you should see the built-in folders (`Library`, `NVIDIA`, `Projects`, `Users`).
+
+   ![](./docs/images/nucleus/11-isaac-sim-nucleus.png)
+
+4. As a side note, you may also need to re-login to the Omniverse Launcher after some time.
+
+   ![](./docs/images/nucleus-troubleshooting/01-omniverse-launcher-login.png)
+
 ## Isaac ROS
 
 ### isaac_ros_common issue
