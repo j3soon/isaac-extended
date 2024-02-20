@@ -93,7 +93,8 @@ The original docker command is:
 
 ```sh
 docker run --name isaac-sim --entrypoint bash -it --gpus all -e "ACCEPT_EULA=Y" --rm --network=host \
-  -v ~/docker/isaac-sim/cache/kit:/isaac-sim/kit/cache/Kit:rw \
+  -e "PRIVACY_CONSENT=Y" \
+  -v ~/docker/isaac-sim/cache/kit:/isaac-sim/kit/cache:rw \
   -v ~/docker/isaac-sim/cache/ov:/root/.cache/ov:rw \
   -v ~/docker/isaac-sim/cache/pip:/root/.cache/pip:rw \
   -v ~/docker/isaac-sim/cache/glcache:/root/.cache/nvidia/GLCache:rw \
@@ -101,7 +102,7 @@ docker run --name isaac-sim --entrypoint bash -it --gpus all -e "ACCEPT_EULA=Y" 
   -v ~/docker/isaac-sim/logs:/root/.nvidia-omniverse/logs:rw \
   -v ~/docker/isaac-sim/data:/root/.local/share/ov/data:rw \
   -v ~/docker/isaac-sim/documents:/root/Documents:rw \
-  nvcr.io/nvidia/isaac-sim:2022.2.1
+  nvcr.io/nvidia/isaac-sim:2023.1.1
 ```
 
 The modified docker command with display is:
@@ -109,7 +110,8 @@ The modified docker command with display is:
 ```sh
 xhost +local:docker
 docker run --name isaac-sim --entrypoint bash -it --gpus all -e "ACCEPT_EULA=Y" --rm --network=host \
-  -v ~/docker/isaac-sim/cache/kit:/isaac-sim/kit/cache/Kit:rw \
+  -e "PRIVACY_CONSENT=Y" \
+  -v ~/docker/isaac-sim/cache/kit:/isaac-sim/kit/cache:rw \
   -v ~/docker/isaac-sim/cache/ov:/root/.cache/ov:rw \
   -v ~/docker/isaac-sim/cache/pip:/root/.cache/pip:rw \
   -v ~/docker/isaac-sim/cache/glcache:/root/.cache/nvidia/GLCache:rw \
@@ -117,11 +119,13 @@ docker run --name isaac-sim --entrypoint bash -it --gpus all -e "ACCEPT_EULA=Y" 
   -v ~/docker/isaac-sim/logs:/root/.nvidia-omniverse/logs:rw \
   -v ~/docker/isaac-sim/data:/root/.local/share/ov/data:rw \
   -v ~/docker/isaac-sim/documents:/root/Documents:rw \
-  -v $(pwd):/app \
+  -v $(pwd):/workspace \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -e DISPLAY=$DISPLAY \
-  nvcr.io/nvidia/isaac-sim:2022.2.1
+  nvcr.io/nvidia/isaac-sim:2023.1.1
 ```
+
+and run `/isaac-sim/runapp.sh` inside the container to start Isaac Sim.
 
 ### Minors
 
