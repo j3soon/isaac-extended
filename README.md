@@ -127,6 +127,10 @@ docker run --name isaac-sim --entrypoint bash -it --gpus all -e "ACCEPT_EULA=Y" 
 
 and run `/isaac-sim/runapp.sh` inside the container to start Isaac Sim.
 
+### Running on Omniverse Farm
+
+Please refer to <https://github.com/j3soon/omni-farm-isaac>.
+
 ### Minors
 
 Bug reports:
