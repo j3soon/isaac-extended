@@ -49,6 +49,18 @@ Solutions:
   cp $ISAAC_SIM/setup_python_env.sh $ISAAC_SIM/setup_python_env.sh.bak
   cp ./isaac_sim-2023.1.0-patch/linux/setup_python_env.sh $ISAAC_SIM/setup_python_env.sh
   ```
+- Isaac Sim 2023.1.1
+  ```sh
+  export ISAAC_SIM="$HOME/.local/share/ov/pkg/isaac_sim-2023.1.1"
+  cp $ISAAC_SIM/setup_python_env.sh $ISAAC_SIM/setup_python_env.sh.bak
+  cp ./isaac_sim-2023.1.1-patch/linux/setup_python_env.sh $ISAAC_SIM/setup_python_env.sh
+  ```
+- Isaac Sim 4.0.0
+  ```sh
+  export ISAAC_SIM="$HOME/.local/share/ov/pkg/isaac-sim-4.0.0"
+  cp $ISAAC_SIM/setup_python_env.sh $ISAAC_SIM/setup_python_env.sh.bak
+  cp ./isaac-sim-4.0.0-patch/linux/setup_python_env.sh $ISAAC_SIM/setup_python_env.sh
+  ```
 
 ### Conda issue on Windows
 
