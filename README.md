@@ -114,7 +114,7 @@ docker run --name isaac-sim --entrypoint bash -it --gpus all -e "ACCEPT_EULA=Y" 
   -v ~/docker/isaac-sim/logs:/root/.nvidia-omniverse/logs:rw \
   -v ~/docker/isaac-sim/data:/root/.local/share/ov/data:rw \
   -v ~/docker/isaac-sim/documents:/root/Documents:rw \
-  nvcr.io/nvidia/isaac-sim:2023.1.1
+  nvcr.io/nvidia/isaac-sim:4.2.0
 ```
 
 The modified docker command with display is:
@@ -134,7 +134,7 @@ docker run --name isaac-sim --entrypoint bash -it --gpus all -e "ACCEPT_EULA=Y" 
   -v $(pwd):/workspace \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -e DISPLAY=$DISPLAY \
-  nvcr.io/nvidia/isaac-sim:2023.1.1
+  nvcr.io/nvidia/isaac-sim:4.2.0
 ```
 
 and run `/isaac-sim/runapp.sh` inside the container to start Isaac Sim.
